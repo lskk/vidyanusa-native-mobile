@@ -8,6 +8,7 @@ import BlueScreen from './screens/BlueScreen';
 import MaizeScreen from './screens/MaizeScreen';
 import GoldScreen from './screens/GoldScreen';
 import BlackScreen from './screens/BlackScreen';
+import ModalScreen from './screens/ModalScreen';
 
 const TabIcon = ({ selected, title }) => {
     return (
@@ -66,6 +67,13 @@ const App = () => {
                         />
                     </Scene>
                 </Scene>
+                <Scene
+                    key="modal"
+                    direction="vertical"
+                    component={ModalScreen}
+                    title="Modal"
+                    hideNavBar
+                />
             </Scene>
         </Router>
     );

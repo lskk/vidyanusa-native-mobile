@@ -15,6 +15,12 @@ const GreyScreen = () => {
             >
                 Scarlet Screen
             </Text>
+            <Text
+                style={styles.welcome}
+                onPress={() => Actions.modal()}
+            >
+                Open Modal
+            </Text>
         </View>
     );
 }
