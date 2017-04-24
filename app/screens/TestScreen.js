@@ -30,6 +30,11 @@ const TestScreen = () => {
             >
 
                 <NavigationBar
+                    style={{
+                        container: {
+                            backgroundColor: '#BDC3C7'
+                        },
+                    }}
                     leftComponent={<Icon name="sidebar" />}
                     centerComponent={<Title>TITLE</Title>}
                     styleName={'inline'}

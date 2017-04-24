@@ -10,6 +10,7 @@ import GoldScreen from './screens/GoldScreen';
 import BlackScreen from './screens/BlackScreen';
 import ModalScreen from './screens/ModalScreen';
 import TestScreen from './screens/TestScreen';
+import LoginScreen from './screens/LoginScreen'
 
 const TabIcon = ({ selected, title }) => {
     return (
@@ -22,8 +23,8 @@ const App = () => {
         <Router>
             <Scene key="root">
                 {/* Tab Container */}
-                <Scene key="test"
-                       component={TestScreen}
+                <Scene key="login"
+                       component={LoginScreen}
                    //    title="Test"
                        hideNavBar={true}
                        initial
