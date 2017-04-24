@@ -9,6 +9,7 @@ import MaizeScreen from './screens/MaizeScreen';
 import GoldScreen from './screens/GoldScreen';
 import BlackScreen from './screens/BlackScreen';
 import ModalScreen from './screens/ModalScreen';
+import TestScreen from './screens/TestScreen';
 
 const TabIcon = ({ selected, title }) => {
     return (
@@ -21,6 +22,12 @@ const App = () => {
         <Router>
             <Scene key="root">
                 {/* Tab Container */}
+                <Scene key="test"
+                       component={TestScreen}
+                   //    title="Test"
+                       hideNavBar={true}
+                       initial
+                />
                 <Scene
                     key="tabbar"
                     tabs={true}
