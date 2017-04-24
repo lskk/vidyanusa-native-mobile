@@ -26,13 +26,13 @@ const imageSources = [
 const TestScreen = () => {
         return (
             <Screen
-                style={styles.container}
-
+                style={{ paddingTop: 70 }}
             >
+
                 <NavigationBar
                     leftComponent={<Icon name="sidebar" />}
                     centerComponent={<Title>TITLE</Title>}
-                    style={{ container: { zIndex: 1 } }}
+                    styleName={'inline'}
                 />
                 <ScrollView >
                     <Tile styleName={'text-centric inflexible'}>
@@ -51,7 +51,7 @@ const TestScreen = () => {
                         style={styles.row}
                         styleName={'md-gutter'}
                     >
-                        <Button styleName="dark">
+                        <Button styleName={'dark'}>
                             <Icon name="add-event" />
                             <Text>ADD TO CALENDAR</Text>
                         </Button>
@@ -76,6 +76,7 @@ const TestScreen = () => {
                         <Caption>...AND MORE!</Caption>
                     </Divider>
                 </ScrollView>
+
             </Screen>
         )
 
