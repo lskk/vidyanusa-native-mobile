@@ -5,20 +5,14 @@ import {
     Text,
     Image,
     Tile,
-    Heading,
-    Title,
-    Subtitle,
     Screen,
     Caption,
     Divider,
-    Card,
     Icon,
-    NavigationBar,
     Button,
     TextInput,
 } from '@shoutem/ui'
 
-import FullWidthImage from '../../components/FullWidthImage'
 
 const win = Dimensions.get('window');
 
@@ -30,12 +24,24 @@ const LoginScreen = () => {
                     <View>
                         <Image
                             style={styles.image}
-                         //   resizeMode={'contain'}
                             source={require('../../assets/logo/vidyanusa-logo.jpg')}
                         />
                     </View>
                 </Tile>
-
+                <Divider style={styles.divider} styleName="section-header">
+                    <Caption>LOGIN</Caption>
+                </Divider>
+                <View style={styles.box}>
+                    <TextInput style={styles.textInput} placeholder={'Username'} />
+                    <TextInput style={styles.textInput} placeholder={'Password'} secureTextEntry />
+                    <Button style={styles.button} styleName={'dark'}>
+                        <Text>MASUK</Text>
+                        <Icon name="right-arrow" />
+                    </Button>
+                </View>
+                <View style={styles.signup}>
+                    <Caption>Belum mempunyai akun ? </Caption><Caption styleName={'bold'}>Silahkan daftar</Caption>
+                </View>
             </ScrollView>
 
         </Screen>
@@ -49,23 +55,43 @@ const styles = {
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'flex-start',
-        margin: 10
+        backgroundColor: '#FFFFFF'
+
+    },
+    divider:{
+        alignSelf: 'stretch',
+        justifyContent: 'center',
+        padding: 10,
     },
     row: {
         flexDirection: 'row',
     },
     image: {
-      //  flex: 1,
-       // alignItems : 'center',
-    //  padding: 100,
+        margin: 10,
         alignSelf: 'stretch',
         height: 100,
-       // alignSelf:'center',
-       // margin: 10,
-        width: win.width,
-       // flexDirection: 'row',
-      //  justifyContent: 'space-around'
+        width: (win.width-20),
         resizeMode: 'contain'
+    },
+    textInput: {
+        backgroundColor: '#ECF0F1',
+    },
+    box: {
+        margin: 10,
+        padding:5,
+        backgroundColor: '#ECF0F1',
+        borderRadius: 5,
+    },
+    button: {
+        marginTop: 15,
+        marginLeft: 5,
+        marginRight: 5,
+        marginBottom: 5,
+    },
+    signup:{
+        flexDirection: 'row',
+        alignSelf: 'stretch',
+        justifyContent: 'center',
     }
 }
 
