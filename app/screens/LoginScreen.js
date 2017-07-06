@@ -92,6 +92,7 @@ const styles = {
         flexDirection: 'row',
         alignSelf: 'stretch',
         justifyContent: 'center',
+        padding: 15
     }
 }
 
